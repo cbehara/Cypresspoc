@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-03-16T09:17:02.648Z",
+    "end": "2021-03-16T09:18:00.095Z",
+    "duration": 57447,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "95be0309-6758-4199-ab97-1507862dd4ae",
+      "title": "",
+      "fullFile": "cypress\\integration\\Sgaurd\\TC10_Homepage_Detektorentab.spec.js",
+      "file": "cypress\\integration\\Sgaurd\\TC10_Homepage_Detektorentab.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "23d1369f-34fc-446b-a2cc-efc0ed545b94",
+          "title": "Detektoren Tab Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Detektoren Tab Functionality",
+              "fullTitle": "Detektoren Tab Functionality Verify the Detektoren Tab Functionality",
+              "timedOut": null,
+              "duration": 618,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/TC10_Homepage_Detektorentab.spec.js/Detektoren Tab Functionality -- Verify the Detektoren Tab Functionality (failed).png\"",
+              "code": "Cypress.on(\"uncaught:exception\", function (err, runnable) {\n  return false;\n}); //click on Detektoren tab\ncy.xpath(\"//span[normalize-space()='Detektoren']\").click({\n  force: true\n}); //verify the URL path\ncy.hash().should('include', '#details/intersection/00-HQ-TCC-K204/detectors'); //check the header titie \ncy.title().should('eq', 'Siemens Serviceguard'); //check the protocol\ncy.location('protocol').should('eq', 'https:'); //click on search buttom\ncy.get('[aria-label=\"Suche\"] > .MuiIconButton-label > .MuiSvgIcon-root').click({\n  force: true\n}); //enter DIA\ncy.get('.MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('D1A{enter}', {\n  force: true\n}); //Select the list\ncy.xpath(\"//tbody/tr[1]/td[2]/li[1]/div[1]/span[1]/img[1]\").click({\n  force: true\n}); //Verify the text\ncy.xpath(\"//span[normalize-space()='Allgemein']\").should('contain.text', 'Allgemein'); //click on next tab\ncy.xpath('//*[@id=\"simple-tab-1\"]/span[1]').click({\n  force: true\n}); //Click on close(*)\ncy.get('.MuiIconButton-label > .material-icons > .jss39').click({\n  force: true\n}); //take screenshot after sucess\ncy.screenshot({\n  capture: \"fullPage\"\n});",
+              "err": {
+                "message": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nThe subject received was:\n\n  > `undefined`\n\nThe previous command that ran was:\n\n  > `cy.xpath()`\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Detektoren Tab Functionality`",
+                "estack": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nThe subject received was:\n\n  > `undefined`\n\nThe previous command that ran was:\n\n  > `cy.xpath()`\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Detektoren Tab Functionality`\n    at ensureElement (https://sguard.testing.its-siemens.com/__cypress/runner/cypress_runner.js:162536:24)\n    at validateType (https://sguard.testing.its-siemens.com/__cypress/runner/cypress_runner.js:162373:16)\n    at Object.ensureSubjectByType (https://sguard.testing.its-siemens.com/__cypress/runner/cypress_runner.js:162409:9)\n    at pushSubjectAndValidate (https://sguard.testing.its-siemens.com/__cypress/runner/cypress_runner.js:171130:15)\n    at Context.<anonymous> (https://sguard.testing.its-siemens.com/__cypress/runner/cypress_runner.js:171467:18)\nFrom Your Spec Code:\n    at Context.eval (https://sguard.testing.its-siemens.com/__cypress/tests?p=cypress\\integration\\Sgaurd\\TC10_Homepage_Detektorentab.spec.js:164:51)",
+                "diff": null
+              },
+              "uuid": "54cc0434-c0ca-4ba4-9fb4-cc31f043b483",
+              "parentUUID": "23d1369f-34fc-446b-a2cc-efc0ed545b94",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "54cc0434-c0ca-4ba4-9fb4-cc31f043b483"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 618,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

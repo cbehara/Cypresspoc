@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-16T09:21:04.280Z",
+    "end": "2021-03-16T09:21:41.573Z",
+    "duration": 37293,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "669ff009-1043-4327-ace1-af784df0de6e",
+      "title": "",
+      "fullFile": "cypress\\integration\\Sgaurd\\TC14_Homepage_Notizentab.spec.js",
+      "file": "cypress\\integration\\Sgaurd\\TC14_Homepage_Notizentab.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "46e6e191-b5da-498b-a509-c883cc65b06a",
+          "title": "Notizen Tab Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Notizen Tab Functionality",
+              "fullTitle": "Notizen Tab Functionality Verify the Notizen Tab Functionality",
+              "timedOut": null,
+              "duration": 32563,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.on(\"uncaught:exception\", function (err, runnable) {\n  return false;\n}); //click on Notizen tab\ncy.xpath(\"//span[contains(text(),'Notizen')]\").contains('Notizen').click({\n  force: true\n}); //Validate the URL path\ncy.hash().should('include', '#details/intersection/00-HQ-TCC-K204/notes'); //Validate the Title \ncy.title().should('eq', 'Siemens Serviceguard'); //Validate the protocol\ncy.location('protocol').should('eq', 'https:'); //Enter text \ncy.xpath(\"//body/div[@id='root']/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/textarea[1]\").type(\"test\"); //Click on submit\ncy.xpath(\"//span[contains(text(),'Senden')]\").click({\n  force: true\n}); //Click on CSV file\ncy.xpath(\"//button[@aria-label='CSV herunterladen']\").click();",
+              "err": {},
+              "uuid": "92fb8278-98d8-4d6e-84b2-ff711e1abb7d",
+              "parentUUID": "46e6e191-b5da-498b-a509-c883cc65b06a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "92fb8278-98d8-4d6e-84b2-ff711e1abb7d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 32563,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

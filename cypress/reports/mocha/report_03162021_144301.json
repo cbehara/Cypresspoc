@@ -1,0 +1,128 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-16T09:12:48.920Z",
+    "end": "2021-03-16T09:13:01.539Z",
+    "duration": 12619,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ea3f2310-d753-4629-b8b9-693ad9896e73",
+      "title": "",
+      "fullFile": "cypress\\integration\\Sgaurd\\TC02_invalid_login.spec.js",
+      "file": "cypress\\integration\\Sgaurd\\TC02_invalid_login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8a456698-dc96-4ac8-966c-3bc2051d2492",
+          "title": "Invalid Login Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should try to login with invalid data",
+              "fullTitle": "Invalid Login Test Should try to login with invalid data",
+              "timedOut": null,
+              "duration": 12430,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.title().should('eq', 'Log in to ITS Identity Test');\ncy.get(\"#kc-form-login\").should(\"be.visible\");\ncy.get('#username').type('invaliduser');\ncy.get('#password').type('invalid password');\ncy.get('.btn').contains('Login').should('be.visible').click();",
+              "err": {},
+              "uuid": "7c853d92-ce55-456c-8bf1-a58a4f059a56",
+              "parentUUID": "8a456698-dc96-4ac8-966c-3bc2051d2492",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should display error message",
+              "fullTitle": "Invalid Login Test Should display error message",
+              "timedOut": null,
+              "duration": 121,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".alert-error\").should(\"be.visible\").and(\"contain\", \"Invalid username or password.\");",
+              "err": {},
+              "uuid": "d01dc9fb-87f4-4fe8-982d-3c2b056f621f",
+              "parentUUID": "8a456698-dc96-4ac8-966c-3bc2051d2492",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7c853d92-ce55-456c-8bf1-a58a4f059a56",
+            "d01dc9fb-87f4-4fe8-982d-3c2b056f621f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12551,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-16T09:21:44.097Z",
+    "end": "2021-03-16T09:22:27.739Z",
+    "duration": 43642,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c49fc821-0405-440a-948b-94dfab4870bd",
+      "title": "",
+      "fullFile": "cypress\\integration\\Sgaurd\\TC15_Homepage_Signalprogrammtab.spec.js",
+      "file": "cypress\\integration\\Sgaurd\\TC15_Homepage_Signalprogrammtab.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eb226e88-f9ad-42f1-9316-343ca3dd916e",
+          "title": "Signalprogramm Tab Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Signalprogramm schalten Tab Functionality",
+              "fullTitle": "Signalprogramm Tab Functionality Verify the Signalprogramm schalten Tab Functionality",
+              "timedOut": null,
+              "duration": 38700,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.on(\"uncaught:exception\", function (err, runnable) {\n  return false;\n}); //click on  Signalprogramm tab\ncy.xpath(\"//*[text()='Signalprogramm schalten']\").click({\n  force: true\n}); //Validate the URL path\ncy.hash().should('include', '#details/intersection/00-HQ-TCC-K204/switch_signal_program'); //Verify the header tite\ncy.title().should('eq', 'Siemens Serviceguard'); //validate the protocol\ncy.location('protocol').should('eq', 'https:'); //",
+              "err": {},
+              "uuid": "25067f9b-bf50-47b3-86eb-e2920a3de281",
+              "parentUUID": "eb226e88-f9ad-42f1-9316-343ca3dd916e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "25067f9b-bf50-47b3-86eb-e2920a3de281"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 38700,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

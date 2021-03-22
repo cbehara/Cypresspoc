@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-16T09:20:26.570Z",
+    "end": "2021-03-16T09:21:02.688Z",
+    "duration": 36118,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "46e32a6a-e3a8-4b54-bdcc-51d4f1c4b389",
+      "title": "",
+      "fullFile": "cypress\\integration\\Sgaurd\\TC13_Homepage_SP-Wechseltab.spec.js",
+      "file": "cypress\\integration\\Sgaurd\\TC13_Homepage_SP-Wechseltab.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4f72b7bf-df6c-4aed-86fe-20e9b3e1518e",
+          "title": "SP-Wechsel Tab Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the SP-Wechsel Tab Functionality",
+              "fullTitle": "SP-Wechsel Tab Functionality Verify the SP-Wechsel Tab Functionality",
+              "timedOut": null,
+              "duration": 31474,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.on(\"uncaught:exception\", function (err, runnable) {\n  return false;\n}); //click on SP-Wechsel tab\ncy.xpath(\"//span[contains(text(),'SP-Wechsel')]\").contains('SP-Wechsel').click({\n  force: true\n}); //validate URL path\ncy.hash().should('include', '#details/intersection/00-HQ-TCC-K204/signal_program'); //Click on calander\ncy.xpath(\"//body/div[@id='root']/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]\").click({\n  force: true\n}); //select date\ncy.xpath(\"//body/div[3]/div[3]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/button[1]\").click({\n  force: true\n}); //cy.xpath('//*[@id=\"simple-tab-5\"]/span[1]').contains('Notizen').click({ force: true });\n//cy.xpath(\"//*[text()='Signalprogramm schalten']\").contains('Signalprogramm schalten').click({ force: true });",
+              "err": {},
+              "uuid": "d77c00eb-443b-4781-986e-1c752f699aae",
+              "parentUUID": "4f72b7bf-df6c-4aed-86fe-20e9b3e1518e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d77c00eb-443b-4781-986e-1c752f699aae"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31474,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

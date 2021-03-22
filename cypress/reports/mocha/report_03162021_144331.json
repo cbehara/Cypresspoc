@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-16T09:13:04.335Z",
+    "end": "2021-03-16T09:13:31.698Z",
+    "duration": 27363,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "22a89589-4559-4342-ae95-e956bd736a38",
+      "title": "",
+      "fullFile": "cypress\\integration\\Sgaurd\\TC03_Homepage_karte.spec.js",
+      "file": "cypress\\integration\\Sgaurd\\TC03_Homepage_karte.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c471d647-a667-44f1-aa49-3a3c2563b3be",
+          "title": "Karte page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Karte page Functionality",
+              "fullTitle": "Karte page Verify the Karte page Functionality",
+              "timedOut": null,
+              "duration": 27266,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/*cy.visit('https://sguard.testing.its-siemens.com/#map')\ncy.get('#username').type('sguard-automation-user')\ncy.get('#password').type('W_TpXpDv%5avJnwAT2R#wdbTsP_2ds9@')\ncy.get('.btn').contains('Login').should('be.visible').click()\ncy.wait(5000)\ncy.title().should('eq','Siemens Serviceguard')\n*/\ncy.wait(5000);\ncy.xpath('//*[@id=\"root\"]/div/div/div[1]/div/header/div/div[1]/div/div[3]/div[2]/div/div/a[1]/span/span').click({\n  force: true\n});\ncy.hash().should('include', '#map');\ncy.wait(5000);\ncy.get('input[type=checkbox]').uncheck();\ncy.get('.jss73 > .MuiIconButton-label > .jss78').check().should('be.checked');\ncy.get('.jss79 > .MuiIconButton-label > .jss78').check().should('be.checked');\ncy.get('.jss81 > .MuiIconButton-label > .jss78').check().should('be.checked');\ncy.get('.jss83 > .MuiIconButton-label > .jss78').check().should('be.checked');\nconsole.log(\"Check the three checkboxs\");\ncy.xpath('//*[@id=\"root\"]/div/div/div[1]/main/div/div[2]/div/button/span[1]/span/img').click();\ncy.get(':nth-child(1) > .MuiPaper-root > #panel1a-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root').click();\ncy.xpath('//*[@id=\"root\"]/div/div/div[1]/main/div/div[2]/div/ul/div[2]/div[1]/span/img').click();\ncy.xpath('//*[@id=\"root\"]/div/div/div[1]/main/div/div[2]/div/ul/div[3]/div[1]/span/img').click();\ncy.xpath('//*[@id=\"root\"]/div/div/div[1]/main/div/div[1]/div/div[2]/div/div[2]/div[1]/div[1]/a[1]').click();\ncy.wait(2000);\ncy.xpath('//*[@id=\"root\"]/div/div/div[1]/main/div/div[1]/div/div[2]/div/div[2]/div[1]/div[1]/a[2]').click();\ncy.get('.MuiIconButton-label > .material-icons > .jss39').click();",
+              "err": {},
+              "uuid": "8f562bbc-4b09-4813-b8b8-3db878ed7f85",
+              "parentUUID": "c471d647-a667-44f1-aa49-3a3c2563b3be",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8f562bbc-4b09-4813-b8b8-3db878ed7f85"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 27266,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

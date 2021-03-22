@@ -1,0 +1,35 @@
+describe('Karte page', function(){
+    Cypress.config('pageLoadTimeout', 100000)
+
+    before(function () {
+       cy.SignIn()
+    })
+   
+    it('Verify the Karte page Functionality', function(){
+        /*cy.visit('https://sguard.testing.its-siemens.com/#map')
+        cy.get('#username').type('sguard-automation-user')
+        cy.get('#password').type('W_TpXpDv%5avJnwAT2R#wdbTsP_2ds9@')
+        cy.get('.btn').contains('Login').should('be.visible').click()
+        cy.wait(5000)
+        cy.title().should('eq','Siemens Serviceguard')
+        */
+        cy.wait(5000)
+        cy.xpath('//*[@id="root"]/div/div/div[1]/div/header/div/div[1]/div/div[3]/div[2]/div/div/a[1]/span/span').click({force: true})
+        cy.hash().should('include','#map')
+        cy.wait(5000)
+        cy.get('input[type=checkbox]').uncheck()
+        cy.get('.jss73 > .MuiIconButton-label > .jss78').check().should('be.checked')
+        cy.get('.jss79 > .MuiIconButton-label > .jss78').check().should('be.checked')
+        cy.get('.jss81 > .MuiIconButton-label > .jss78').check().should('be.checked')
+        cy.get('.jss83 > .MuiIconButton-label > .jss78').check().should('be.checked')
+        console.log("Check the three checkboxs")
+        cy.xpath('//*[@id="root"]/div/div/div[1]/main/div/div[2]/div/button/span[1]/span/img').click()
+        cy.get(':nth-child(1) > .MuiPaper-root > #panel1a-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root').click()
+        cy.xpath('//*[@id="root"]/div/div/div[1]/main/div/div[2]/div/ul/div[2]/div[1]/span/img').click()
+        cy.xpath('//*[@id="root"]/div/div/div[1]/main/div/div[2]/div/ul/div[3]/div[1]/span/img').click()
+        cy.xpath('//*[@id="root"]/div/div/div[1]/main/div/div[1]/div/div[2]/div/div[2]/div[1]/div[1]/a[1]').click()
+        cy.wait(2000)
+        cy.xpath('//*[@id="root"]/div/div/div[1]/main/div/div[1]/div/div[2]/div/div[2]/div[1]/div[1]/a[2]').click()
+        cy.get('.MuiIconButton-label > .material-icons > .jss39').click()
+    })
+})

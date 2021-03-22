@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-16T09:12:19.080Z",
+    "end": "2021-03-16T09:12:46.545Z",
+    "duration": 27465,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "79f3fc57-5ac1-4e45-9ad0-5121de2715a2",
+      "title": "",
+      "fullFile": "cypress\\integration\\Sgaurd\\TC01_valid_login_logout.spec.js",
+      "file": "cypress\\integration\\Sgaurd\\TC01_valid_login_logout.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d849c5d0-3370-4fa8-b6b3-ada63396d2db",
+          "title": "Valid Login/logout Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should login to application with valid data",
+              "fullTitle": "Valid Login/logout Test Should login to application with valid data",
+              "timedOut": null,
+              "duration": 27328,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.title().should('eq', 'Log in to ITS Identity Test');\ncy.location('protocol').should('eq', 'https:');\ncy.fixture('userLogindetails').then(function (user) {\n  cy.get('#username').type(user.username);\n  cy.get('#password').type(user.password);\n  cy.get('.btn').contains('Login').should('be.visible').click();\n  cy.screenshot({\n    capture: \"fullPage\"\n  });\n});\ncy.wait(3000);\ncy.viewport(1280, 720);\ncy.contains('serviceGuard', {\n  timeout: 10000\n}).should('be.visible');\ncy.xpath('//*[@id=\"root\"]/div/div/div[1]/div/header/div/div[2]/button/span[1]/div/span/img').click();\ncy.xpath('//*[@id=\"user-menu\"]/div[3]/ul/li').click();\ncy.screenshot({\n  capture: \"fullPage\"\n});",
+              "err": {},
+              "uuid": "e9e15a14-e552-4587-baf4-7804e6e56d66",
+              "parentUUID": "d849c5d0-3370-4fa8-b6b3-ada63396d2db",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e9e15a14-e552-4587-baf4-7804e6e56d66"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 27328,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

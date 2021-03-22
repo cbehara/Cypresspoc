@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-16T09:14:20.082Z",
+    "end": "2021-03-16T09:14:54.745Z",
+    "duration": 34663,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "53ee0e02-2342-4863-bd2c-e46565c01b1e",
+      "title": "",
+      "fullFile": "cypress\\integration\\Sgaurd\\TC06_Homepage_search.spec.js",
+      "file": "cypress\\integration\\Sgaurd\\TC06_Homepage_search.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "003a04ea-2dee-4c98-8650-a1a6035d72c4",
+          "title": "Search Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Search Functionality",
+              "fullTitle": "Search Functionality Verify the Search Functionality",
+              "timedOut": null,
+              "duration": 34489,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.on(\"uncaught:exception\", function (err, runnable) {\n  return false;\n}); //select the Training center city from dropdown\ncy.get('#city-select').click({\n  force: true\n});\ncy.xpath('//div[3]/ul/li[2]').contains('Training Center').click();\ncy.wait(5000); //search 00-HQ-TCC-K204 and enter\ncy.xpath('//*[@id=\"react-select-2-input\"]').type('00-HQ-TCC-K204{enter}', {\n  force: true\n}); //verify the url path \ncy.hash().should('include', '#details/intersection/00-HQ-TCC-K204/general'); //check the text on page \ncy.get('.MuiCardHeader-content > :nth-child(1)').should('contain.text', 'Braunschweiger Str. / Siemensstr.'); //Take screenshot of full page after success \ncy.screenshot({\n  capture: \"fullPage\"\n});",
+              "err": {},
+              "uuid": "e244ff91-e625-4fb2-be81-76b1253544e2",
+              "parentUUID": "003a04ea-2dee-4c98-8650-a1a6035d72c4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e244ff91-e625-4fb2-be81-76b1253544e2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 34489,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

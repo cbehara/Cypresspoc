@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-16T09:16:26.205Z",
+    "end": "2021-03-16T09:17:00.612Z",
+    "duration": 34407,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5da3f6fb-f6b8-448c-a132-d353fbaa4968",
+      "title": "",
+      "fullFile": "cypress\\integration\\Sgaurd\\TC09_Homepage_Allgemeintab.spec.js",
+      "file": "cypress\\integration\\Sgaurd\\TC09_Homepage_Allgemeintab.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5152f179-d393-4a8c-abc1-807bb3d8a478",
+          "title": "Allgemein Tab Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Allgemein Tab Functionality",
+              "fullTitle": "Allgemein Tab Functionality Verify the Allgemein Tab Functionality",
+              "timedOut": null,
+              "duration": 29652,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.on(\"uncaught:exception\", function (err, runnable) {\n  return false;\n}); //verify the Allgemein text \ncy.xpath(\"//span[normalize-space()='Allgemein']\").should('contain.text', 'Allgemein'); //validate the image text\n//cy.xpath(\"//img[@class='leaflet-marker-icon leaflet-zoom-animated leaflet-interactive']\").find('img').should('have.attr', 'src', 'intersection_ok')\n//click on details page \ncy.xpath(\"//span[text()='LSA Zustand']\").click({\n  force: true\n}); //take the screenshot after sucess \ncy.screenshot({\n  capture: \"fullPage\"\n});",
+              "err": {},
+              "uuid": "33123904-fd57-4cb3-9a4b-c94b1f089b6f",
+              "parentUUID": "5152f179-d393-4a8c-abc1-807bb3d8a478",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "33123904-fd57-4cb3-9a4b-c94b1f089b6f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 29652,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-03-16T09:19:14.563Z",
+    "end": "2021-03-16T09:20:24.565Z",
+    "duration": 70002,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8914f155-fc21-413d-b853-1235dbd37433",
+      "title": "",
+      "fullFile": "cypress\\integration\\Sgaurd\\TC12_Homepage_Ereignisprotokolltab.spec.js",
+      "file": "cypress\\integration\\Sgaurd\\TC12_Homepage_Ereignisprotokolltab.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f3e2c051-dedb-4205-944a-5cedeeaede4a",
+          "title": "Ereignisprotokoll Tab Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Ereignisprotokoll Tab Functionality",
+              "fullTitle": "Ereignisprotokoll Tab Functionality Verify the Ereignisprotokoll Tab Functionality",
+              "timedOut": null,
+              "duration": 547,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/TC12_Homepage_Ereignisprotokolltab.spec.js/Ereignisprotokoll Tab Functionality -- Verify the Ereignisprotokoll Tab Functionality (failed).png\"",
+              "code": "Cypress.on(\"uncaught:exception\", function (err, runnable) {\n  return false;\n}); //click on Ereignisprotokoll tab\ncy.xpath(\"//span[normalize-space()='Ereignisprotokoll']\").should('contain.text', 'Ereignisprotokoll').click({\n  force: true\n}); //verify the URL path\ncy.hash().should('include', '#details/intersection/00-HQ-TCC-K204/events'); //check the header titie \ncy.title().should('eq', 'Siemens Serviceguard'); //check the protocol\ncy.location('protocol').should('eq', 'https:'); //Click on calander\ncy.xpath('//*[@id=\"root\"]/div/div/div[1]/div[2]/div/div[2]/div/div/div/div/div/div/div/div[1]/div/div[1]/div/div/div/button').click({\n  force: true\n});\ncy.wait(3000); //Select the date\ncy.xpath('//body/div[3]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/button[1]/span[1]').click({\n  force: true\n});\ncy.wait(3000); //Select the checkbox     \ncy.get('input[type=checkbox]').check({\n  force: true\n}).should('be.checked');\ncy.wait(3000); //Download the CSV file \ncy.get('[aria-label=\"CSV herunterladen\"] > .MuiIconButton-label > .MuiSvgIcon-root > path').click({\n  force: true\n});\ncy.wait(3000);",
+              "err": {
+                "message": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nThe subject received was:\n\n  > `undefined`\n\nThe previous command that ran was:\n\n  > `cy.xpath()`\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Ereignisprotokoll Tab Funct...`",
+                "estack": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nThe subject received was:\n\n  > `undefined`\n\nThe previous command that ran was:\n\n  > `cy.xpath()`\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Ereignisprotokoll Tab Funct...`\n    at ensureElement (https://sguard.testing.its-siemens.com/__cypress/runner/cypress_runner.js:162536:24)\n    at validateType (https://sguard.testing.its-siemens.com/__cypress/runner/cypress_runner.js:162373:16)\n    at Object.ensureSubjectByType (https://sguard.testing.its-siemens.com/__cypress/runner/cypress_runner.js:162409:9)\n    at pushSubjectAndValidate (https://sguard.testing.its-siemens.com/__cypress/runner/cypress_runner.js:171130:15)\n    at Context.<anonymous> (https://sguard.testing.its-siemens.com/__cypress/runner/cypress_runner.js:171467:18)\nFrom Your Spec Code:\n    at Context.eval (https://sguard.testing.its-siemens.com/__cypress/tests?p=cypress\\integration\\Sgaurd\\TC12_Homepage_Ereignisprotokolltab.spec.js:158:51)",
+                "diff": null
+              },
+              "uuid": "760d69ad-6ba4-4336-8479-08b4f58eb690",
+              "parentUUID": "f3e2c051-dedb-4205-944a-5cedeeaede4a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "760d69ad-6ba4-4336-8479-08b4f58eb690"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 547,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

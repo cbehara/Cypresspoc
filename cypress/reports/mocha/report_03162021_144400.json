@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-16T09:13:33.931Z",
+    "end": "2021-03-16T09:14:00.114Z",
+    "duration": 26183,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "34874d41-acd9-47e1-84d1-f9da090099e4",
+      "title": "",
+      "fullFile": "cypress\\integration\\Sgaurd\\TC04_Homepage_liste.spec.js",
+      "file": "cypress\\integration\\Sgaurd\\TC04_Homepage_liste.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dbe81359-0e98-4c64-aafd-391279c47278",
+          "title": "Liste Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Liste Page",
+              "fullTitle": "Liste Page Verify the Liste Page",
+              "timedOut": null,
+              "duration": 25819,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.on(\"uncaught:exception\", function (err, runnable) {\n  return false;\n});\ncy.viewport(1280, 720);\ncy.wait(5000);\ncy.xpath('//*[@id=\"root\"]/div/div/div[1]/div/header/div/div[1]/div/div[3]/div[2]/div/div/a[2]/span/span').click();\ncy.screenshot({\n  capture: \"fullPage\"\n});\ncy.hash().should('include', '#all');\ncy.wait(2000); // cy.get(\"#mui-26717\").should(\"have.value\", 100);\n//cy.get('#mui-26717').select(100)\n//cy.get('//*[@id=\"mui-16194\"]').select()\n// cy.xpath('//*[@id=\"mui-26717\"]').click()\n//cy.get('[data-value=\"10\"]').select(10)\n//cy.get(\"#mui-26717\").select(10);\ncy.get('input[type=checkbox]').check({\n  force: true\n}).should('be.checked');\ncy.xpath('//*[@id=\"root\"]/div/div/div[1]/div[2]/div/div/div/div/div/div[3]/div/div[1]/div[2]/button[4]/span[1]/span/img').click();",
+              "err": {},
+              "uuid": "8858c82c-9794-4f27-8892-21ba168bf06c",
+              "parentUUID": "dbe81359-0e98-4c64-aafd-391279c47278",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8858c82c-9794-4f27-8892-21ba168bf06c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 25819,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

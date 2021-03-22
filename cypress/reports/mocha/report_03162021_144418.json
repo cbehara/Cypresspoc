@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-16T09:14:02.413Z",
+    "end": "2021-03-16T09:14:18.531Z",
+    "duration": 16118,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b8ef0b5b-880a-4881-958e-72bc89b54f1b",
+      "title": "",
+      "fullFile": "cypress\\integration\\Sgaurd\\TC05_Homepage_favoritne.spec.js",
+      "file": "cypress\\integration\\Sgaurd\\TC05_Homepage_favoritne.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d62e715c-c0fc-48c0-9c96-6abd82006a43",
+          "title": "Favorite Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Favorite Page",
+              "fullTitle": "Favorite Page Verify the Favorite Page",
+              "timedOut": null,
+              "duration": 16070,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.on(\"uncaught:exception\", function (err, runnable) {\n  return false;\n});\ncy.viewport(1280, 720);\ncy.wait(5000);\ncy.xpath('//*[@id=\"root\"]/div/div/div[1]/div[1]/header/div/div[1]/div/div[3]/div[2]/div/div/a[3]/span/span').click();\ncy.hash().should('include', '#favorite');\ncy.title().should('eq', 'Siemens Serviceguard');\ncy.location('protocol').should('eq', 'https:');\ncy.get('input[type=checkbox]').check({\n  force: true\n}).should('be.checked'); //cy.get('.MuiTableRow-root > :nth-child(7)').contains(\"00-HQ-TCC-Intersection F_3Ph\")\ncy.wait(2000);\ncy.get('[aria-label=\"CSV herunterladen\"] > .MuiIconButton-label > .MuiSvgIcon-root').click(); //cy.xpath('//*[@id=\"root\"]/div/div[2]/div[1]/div[2]/div/div/div/div/div/div[3]/div[1]/div[2]/button[2]/span[1]/svg/path').click()",
+              "err": {},
+              "uuid": "f7650b78-ff55-45d5-bac5-3710a2fbd20e",
+              "parentUUID": "d62e715c-c0fc-48c0-9c96-6abd82006a43",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f7650b78-ff55-45d5-bac5-3710a2fbd20e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16070,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

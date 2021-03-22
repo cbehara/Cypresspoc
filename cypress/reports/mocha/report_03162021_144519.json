@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-16T09:14:56.916Z",
+    "end": "2021-03-16T09:15:19.697Z",
+    "duration": 22781,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4561508b-699d-49f7-8ddc-0326f8365f7b",
+      "title": "",
+      "fullFile": "cypress\\integration\\Sgaurd\\TC07_Homepage_Selectcity.spec.js",
+      "file": "cypress\\integration\\Sgaurd\\TC07_Homepage_Selectcity.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "95a36900-3635-4195-970e-4e43db2dcd69",
+          "title": "Select city Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Select city Functionality",
+              "fullTitle": "Select city Functionality Verify the Select city Functionality",
+              "timedOut": null,
+              "duration": 22685,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.on(\"uncaught:exception\", function (err, runnable) {\n  return false;\n}); //maximize the page \ncy.viewport(1280, 720);\ncy.wait(10000); //select Training Center city from dropdown\ncy.get('#city-select').click({\n  force: true\n});\ncy.xpath('//div[3]/ul/li[2]').contains('Training Center').click(); //Take screenshot of full page after success \ncy.screenshot({\n  capture: \"fullPage\"\n});",
+              "err": {},
+              "uuid": "b4101e28-0fe4-4b60-ba0f-c41b4be30565",
+              "parentUUID": "95a36900-3635-4195-970e-4e43db2dcd69",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b4101e28-0fe4-4b60-ba0f-c41b4be30565"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22685,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

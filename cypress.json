@@ -1,0 +1,26 @@
+{
+  "baseUrl": "https://sguard.testing.its-siemens.com",
+  "chromeWebSecurity": false,
+  "integrationFolder": "cypress/integration/Sgaurd",
+  "screenshotsFolder": "cypress/reports/mochareports/assets",
+  "video": false,
+  "pageLoadTimeout": 60000,
+  "requestTimeout": 60000,
+  "responseTimeout": 60000,
+  "defaultCommandTimeout": 30000,
+  "screenshotOnRunFailure": true,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mocha",
+      "reportFilename": "report",
+      "quite": true,
+      "overwrite": false,
+      "html": false,
+      "json": true,
+      "timestamp": "mmddyyyy_HHMMss"
+    }
+  },
+  "experimentalStudio": true
+}

@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-03-16T09:18:02.407Z",
+    "end": "2021-03-16T09:19:11.237Z",
+    "duration": 68830,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f63d8a1d-687c-41a5-868e-77f638d7182c",
+      "title": "",
+      "fullFile": "cypress\\integration\\Sgaurd\\TC11_Homepage_Detailzustandtab.spec.js",
+      "file": "cypress\\integration\\Sgaurd\\TC11_Homepage_Detailzustandtab.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e2f1f511-1d30-49f0-9209-7feb7ec32f35",
+          "title": "Detailzustand Tab Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Detailzustand Tab Functionality",
+              "fullTitle": "Detailzustand Tab Functionality Verify the Detailzustand Tab Functionality",
+              "timedOut": null,
+              "duration": 785,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/TC11_Homepage_Detailzustandtab.spec.js/Detailzustand Tab Functionality -- Verify the Detailzustand Tab Functionality (failed).png\"",
+              "code": "Cypress.on(\"uncaught:exception\", function (err, runnable) {\n  return false;\n}); //click on Detailzustand tab\ncy.xpath(\"//span[contains(text(),'Detailzustand')]\").should('contain.text', 'Detailzustand').click({\n  force: true\n}); //Click on calender \ncy.xpath(\"//button[@aria-label='change date']\").click({\n  force: true\n}); //Select date\ncy.xpath(\"//div[@class='MuiPickersSlideTransition-transitionContainer MuiPickersCalendar-transitionContainer']//div[2]//div[3]//button[1]\").click({\n  force: true\n});\ncy.wait(3000); //click on checkbox\ncy.get('input[type=checkbox]').check({\n  force: true\n}).should('be.checked');\ncy.wait(3000); //click on download csv file button\n//cy.xpath(\"//button[@title='CSV herunterladen']\").click({ force: true })\n//cy.wait(3000)\ncy.xpath(\"//body/div[@id='root']/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/button[2]/span[1]/*[1]\").click();\ncy.wait(3000);",
+              "err": {
+                "message": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nThe subject received was:\n\n  > `undefined`\n\nThe previous command that ran was:\n\n  > `cy.xpath()`\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Detailzustand Tab Functiona...`",
+                "estack": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nThe subject received was:\n\n  > `undefined`\n\nThe previous command that ran was:\n\n  > `cy.xpath()`\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Detailzustand Tab Functiona...`\n    at ensureElement (https://sguard.testing.its-siemens.com/__cypress/runner/cypress_runner.js:162536:24)\n    at validateType (https://sguard.testing.its-siemens.com/__cypress/runner/cypress_runner.js:162373:16)\n    at Object.ensureSubjectByType (https://sguard.testing.its-siemens.com/__cypress/runner/cypress_runner.js:162409:9)\n    at pushSubjectAndValidate (https://sguard.testing.its-siemens.com/__cypress/runner/cypress_runner.js:171130:15)\n    at Context.<anonymous> (https://sguard.testing.its-siemens.com/__cypress/runner/cypress_runner.js:171467:18)\nFrom Your Spec Code:\n    at Context.eval (https://sguard.testing.its-siemens.com/__cypress/tests?p=cypress\\integration\\Sgaurd\\TC11_Homepage_Detailzustandtab.spec.js:151:51)",
+                "diff": null
+              },
+              "uuid": "e26fe8ce-ea35-4200-acb0-a3cb609f570c",
+              "parentUUID": "e2f1f511-1d30-49f0-9209-7feb7ec32f35",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e26fe8ce-ea35-4200-acb0-a3cb609f570c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 785,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}
