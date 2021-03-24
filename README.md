@@ -80,3 +80,44 @@ Example test program execution in cypress
 Select any one of the .js files present in the examples folder in the test runner. Here I have selected the aliasing.spec.js file.
 After selecting the file, The test runner is automatically prompted along with the browser. Cypress executes in the same run loop as the application.
 execution-test-programSuccessfully we now know how to launch the test runner. Let's try to explore some of the Cypress folders.
+
+
+## Userful commands to run cypress spec files 
+
+**To generate a package.json**
+npm init
+
+**To install CypressIO**
+npm install cypress
+
+**To install Prettier**
+npm install prettier​
+
+**To open Cypress**
+npx cypress open
+
+**To run all .js spec files**
+npx cypress run
+
+**To run a specific .js spec files**
+npx cypress run --spec "file path"
+By default, Cypress runs in headless mode.
+
+**To run in a headed mode**
+npx cypress run --headed --spec "file path"
+
+**To run in a headless mode with a different browser**
+npx cypress run --headless --spec "file path"--browser chrome
+
+**To run in a headed mode with a different browser**
+npx cypress run --headed --spec "file path"--browser chrome
+
+node_modules\.bin\cypress run --headed --spec "cypress/integration/examples/Test.js"--browser chrome
+[OR]
+node_modules\.bin\cypress run --spec "cypress/integration/examples/Test.js"--browser chrome
+[OR]
+npx cypress run --spec "cypress/integration/examples/Test.js"--browser chrome
+[OR]
+npx cypress run --headed --spec "cypress/integration/examples/Test.js"--browser chrome
+
+
